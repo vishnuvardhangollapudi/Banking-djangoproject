@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>porio.com</title>
+    <style>
+    select,input{
+    font-size: 30px;}
+    body{
+      background-color: blanchedalmond;
+    }
+    a{
+      font-size: 30px;
+    }
+</style>
+</head>
+<body>
+<a href="{% url 'home' %}" >BACK</a>
+{% csrf_token %}
+<form method="POST" action="/piechart/">
+       {% csrf_token %}
+          <select name="loantype">
+  <option value="StudyLoan">StudyLoan</option>
+  <option value="HomeLoan">HomeLoan</option>
+  <option value="PersonalLoan">PersonalLoan</option>
+  <option value="VechileLoan">VechileLoan</option>
+  <option value="BussinessLoan">BussinessLoan</option>
+     </select>
+
+      <input type="submit" value="submi">
+</form>
+
+<table>
+    <tr style="font-size: 30px;">
+      <th bgcolor="#ff0000" >AMOUNT_BALANCE</th>&nbsp;
+
+    <th bgcolor="#0000ff">AMOUNT_TAKEN</th>
+    <th bgcolor="#ff0080">AMOUNT_HAVE_TO_PAY</th>
+	  <th bgcolor="#73ffff">AMOUNT_PAYED</th>
+    </tr>
+    {% csrf_token %}
+</table>
+
+
+{% block content %}
+<center><h1>{{message}}</h1></center>
+ <div id="container" style="width: 75%;">
+    <canvas id="pie-chart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script><script>
+    var config = {
+      type: 'pie',
+
+      data: {
+        datasets: [{
+          data: {{ data|safe }},
+          backgroundColor: [
+            '#ff0000', '#0000ff', '#ff0080', '#73ffff', '#5c26ff', '#002db3', '#ffff26', '#4cff4c', '#ff00ff'
+          ],
+          label: 'Population'
+        }],
+        labels: {{ labels|safe }}
+      },
+      options: {
+        responsive: true
+      }
+    };
+
+    window.onload = function() {
+      var ctx = document.getElementById('pie-chart').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+    };
+  </script>
+{% endblock %}
+</body>
+</html>
+

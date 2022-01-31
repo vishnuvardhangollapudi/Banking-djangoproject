@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+{
+    margin: 0;
+    padding: 0;
+    background-color:#ADEFD1FF;
+    font-family: 'Arial';
+}
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background:  #00203FFF;
+        border-radius: 15px ;
+
+}
+th,td{
+    padding: 10px;
+}
+h2{
+    text-align: center;
+    color:  #d64161;
+    padding: 20px;
+}
+label{
+    color:#FFFFFF ;
+    font-size: 20px;
+}
+input{
+    font-size: 20px;
+}
+#Uname{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#submit{
+    width: 500px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: #008000;
+    background-color:#008000;
+
+
+
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+a{font-size: 20px;
+    float: center;
+    background-color:white;
+}
+    </style>
+</head>
+<body>
+{% csrf_token %}
+<h2>Login Page</h2><br>
+    <div class="login">
+    <form  method="POST" action="/adminlogin/">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th>
+                    <label><b>User_Name
+                    </b>
+                    </label>
+                </th>
+                <td>
+                    <input type="text"  name="email" placeholder="example@gmail.com">
+
+                </td>
+
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <th>
+                    <label><b>Password
+                    </b>
+                    </label>
+                </th>
+                <td>
+                    <input type="password" name="pwd" placeholder="Password">
+
+                </td>
+
+            </tr>
+
+        </table>
+
+
+
+
+
+       <input type="submit" value="submit">&nbsp;&nbsp;<br>
+
+    </form>
+</div>
+</body>
+</html>

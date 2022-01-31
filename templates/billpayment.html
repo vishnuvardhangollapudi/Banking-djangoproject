@@ -1,0 +1,78 @@
+{% extends "header.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>billpayment</title>
+
+
+    <style>
+
+        .block {
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+    </style>
+</head>
+
+
+
+<body>
+
+
+
+    {% block content %}
+
+<center>
+
+        <h1>
+    Bill Payments
+</h1>
+
+
+
+<a href="{% url 'creditcard' %}" style="
+  display: block;
+  width: 50%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">CreditCard Bill</a>
+<br>
+<a href="{% url 'recharge' %}" style="
+  display: block;
+  width: 50%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Recharge</a>
+<br>
+
+</center>
+{% endblock %}
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+{% extends "header.html" %}
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <style>
+
+        .block {
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+    </style>
+</head>
+
+
+
+<body>
+
+
+    {% block content %}
+    <center><h1>Services</h1></center>
+    <center>
+
+<a href="{% url 'billpayment' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Bill Payment</a>
+<br>
+<a href="{% url 'payment' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Payment Or Transfer Amount</a>
+<br>
+
+<a href="{% url 'payloan' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">My loans and Pay loan</a>
+<br>
+
+<a href="{% url 'loans' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">About Loan details</a>
+<br>
+        <a href="{% url 'applyloanuser' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Apply Loan</a>
+<br>
+
+<a href="{% url 'transactions' %}"
+style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+"
+>Transactions/Spend analysis</a>
+        <br>
+        <a href="{% url 'piechart' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Visualizations of loans</a>
+        <br>
+        <a href="http://127.0.0.1:8000/home/amountsactionlist/" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Loan AmountSanction List </a>
+        <br>
+      <a href="{% url 'loancalculate' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Loan amount calculator</a>
+
+
+        </center>
+
+{% endblock %}
+
+
+
+
+</body>
+</html>

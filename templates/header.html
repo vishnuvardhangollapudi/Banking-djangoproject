@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>porio.com homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+
+    .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #F44336;
+   color: white;
+   text-align: center;
+}
+body{
+background-color: #FFE4B5;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a style="background-color:#F44336;color:white" class="navbar-brand" href="#">Porio.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="http://127.0.0.1:8000/home/usermessages/">Messages</a></li>
+      <li><a href="{% url 'about' %}">About-us</a></li>
+      <li><a href="http://127.0.0.1:8000/home/customerservice/">Customer-service</a></li>
+
+    </ul>
+     <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'myaccount' %}">My Account</a></li>
+         <li><a href="{% url 'logut' %}"><span class="glyphicon glyphicon-log-in"></span> Logut</a></li>
+    </ul>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+
+
+<div class="footer">
+  <p>Terms & Conditions Do Not Call Registry Disclaimer Multilingual Disclaimer Code of Commitment Group Code of Business Conduct and Ethics Customer Service Policies Use of Unparliamentary Language by Customers Privacy USA Patriot Act Certification Fair Practice Code for Lenders
+</p><p>Copyright© 2020 . All rights Reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transcation page</title>
+     <link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		.i-am-centered {
+			margin: auto;
+			max-width: 300px;
+			padding-top: 20%;
+		}
+		body{
+		background-color:burlywood;
+		}
+		* {box-sizing: border-box;}
+
+
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+	</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">PorioAdmin</a>
+  <div class="header-right">
+
+    <a href="{%url 'adminhome' %}">Home</a>
+       <a class="active" href="#home">logut</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<center><h1 style=" bgcolour:black">New User List</h1></center>
+  <center>
+    <h1>
+      {{message}}
+
+    </h1>
+  </center>
+<br><br><br>
+{% csrf_token %}
+<form method="POST" action="/newuserlist/">
+    {% csrf_token %}
+<table style="width:80%" align=center border='2' bgcolor="blanchedalmond"  class="table table-bordered table-dark">
+
+        <tr>
+        <th>Name</th>
+        <th>Email</th><th>PanCard NO</th><th>Addhar NO</th><th>Date of Birth</th><th>Phone Number</th><th>Branch</th>
+            <th>City</th><th>Gender</th>
+
+        </tr>
+        <tr>
+            {% for user in newuserlist %}
+            <td>
+                {{user.name}}
+            </td>
+             <td>
+                {{user.email}}
+            </td>
+            <td>
+                {{user.panno}}
+            </td>
+             <td>
+               {{user.adharno}}
+            </td>
+
+             <td>
+                {{user.dob}}
+            </td>
+             <td>
+                {{user.phnnum}}
+            </td>
+             <td>
+                {{user.branch}}
+            </td>
+
+             <td>
+                     {{user.city}}
+            </td>
+
+            <td>
+                    {{user.gender}}
+            </td>
+
+
+
+                <td>
+                    <button type="submit" value="{{user.email}}" name="submit">approve</button>
+            </td>
+                <td>
+                    <button type="submit" value="{{user.email}}" name="delete">delete</button>
+            </td>
+
+
+        </tr>
+
+{% endfor %}
+    </table>
+
+</form>
+</body>
+</html>

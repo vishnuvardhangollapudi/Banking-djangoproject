@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{message}}
+{% csrf_token %}
+<form method="POST" action="/banklist/">
+    {% csrf_token %}
+    <input type="text" name="bankname" placeholder="bankname">
+     <input type="text" name="loantype" placeholder="loantype">
+     <input type="text" name="intrest" placeholder="intrest">
+     <input type="text" name="description" placeholder="description">
+     <input type="submit" value="submit">
+
+
+
+</form>
+
+</body>
+</html>

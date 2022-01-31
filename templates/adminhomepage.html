@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#F44336;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">PorioAdmin</a>
+  <div class="header-right">
+
+    <a href="{%url 'adminhome' %}">Home</a>
+
+       <a class="active" href="#home">logut</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+    <center>
+<a href="{% url 'addmoney' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Add Money to User</a>
+<br>
+<a href="{% url 'loanslist' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Applied Loan User</a>
+<br>
+
+<a href="{% url 'approveloanamount' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Approve Loan Amount By Bank</a>
+<br>
+
+<a href="{% url 'user' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">All Users</a>
+<br>
+
+
+<a href="{% url 'newuserlist' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">New User List</a><br>
+
+        <a href="{% url 'messagefromuser' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Message From User</a><br>
+
+        <a href="{% url 'sendmessageuser' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">Send Message User</a><br>
+<a href="{% url 'adminuserloanlist' %}" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">All User Loan List</a><br>
+        <a href="http://127.0.0.1:8000/demo/" style="
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 28px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+">All User Loans Visualization</a>
+    </center>
+</body>
+</html>
+

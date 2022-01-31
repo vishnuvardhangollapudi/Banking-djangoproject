@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.row-30 > * {
+    margin-bottom: 30px;
+}
+@media (min-width: 768px)
+.col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto, .col-xxl-1, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6, .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-10, .col-xxl-11, .col-xxl-12, .col-xxl, .col-xxl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+body {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.71429;
+    font-weight: 300;
+    color: #29293a;
+    letter-spacing: 0.05em;
+    background-color: #ffffff;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+body {
+    margin: 0;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71429;
+    color: #29293a;
+    text-align: left;
+    background-color: #ffffff;
+}
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #7b59d0;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #ffffff;
+    --gray: #868e96;
+    --gray-dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1600px;
+    --font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<a href="{% url 'home' %}" style="
+  background-color: #04AA6D;
+  color: white;
+    font-size:30px;
+">BACK</a>
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>We deliver intuitive, people-centric solutions that help industry leaders quickly and confidently make important decisions, take action, and achieve tangible results.
+
+Our AI-powered platform is built with a purposeful balance of humanity and technology, weaving together over 20 years of experience with data derived from billions of real questions and responses</p>
+
+  <h1>Our beliefs and guiding principles</h1>
+  <p>Our vision, mission, and values reflect the best interests of our customers, employees, and community. They inspire our growth. They help shape our business decisions, define our culture, and gauge our success. Through our choices, words, and actions, we strive to live our values each and every day.</p>
+
+
+
+</div>
+<div class="col-md-6 col-lg-5">
+              <div class="progress-linear-wrap">
+                <!-- Linear progress bar-->
+                <article class="progress-linear animated-first">
+                  <div class="progress-header">
+                    <p>Financial Consulting</p><span class="progress-value">75</span>
+                  </div>
+                  <div class="progress-bar-linear-wrap">
+                    <div class="progress-bar-linear" style="width: 75%;"></div>
+                  </div>
+                </article>
+                <!-- Linear progress bar-->
+                <article class="progress-linear animated-first">
+                  <div class="progress-header">
+                    <p>Online Reporting</p><span class="progress-value">50</span>
+                  </div>
+                  <div class="progress-bar-linear-wrap">
+                    <div class="progress-bar-linear" style="width: 50%;"></div>
+                  </div>
+                </article>
+                <!-- Linear progress bar-->
+                <article class="progress-linear animated-first">
+                  <div class="progress-header">
+                    <p>Online Banking</p><span class="progress-value">75</span>
+                  </div>
+                  <div class="progress-bar-linear-wrap">
+                    <div class="progress-bar-linear" style="width: 75%;"></div>
+                  </div>
+                </article>
+                <!-- Linear progress bar-->
+                <article class="progress-linear animated-first">
+                  <div class="progress-header">
+                    <p>24/7 Support</p><span class="progress-value">75</span>
+                  </div>
+                  <div class="progress-bar-linear-wrap">
+                    <div class="progress-bar-linear" style="width: 75%;"></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

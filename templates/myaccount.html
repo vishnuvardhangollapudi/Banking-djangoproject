@@ -1,0 +1,115 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER DETAILS</title>
+     <link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+
+    .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #F44336;
+   color: white;
+   text-align: center;
+}
+
+
+
+
+		.i-am-centered {
+			margin: auto;
+			max-width: 300px;
+			padding-top: 20%;
+		}
+		body{
+		background-color:burlywood;
+		}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a style="background-color:#F44336;color:white" class="navbar-brand" href="#">Porio.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="#">Contact-us</a></li>
+      <li><a href="#">About-us</a></li>
+      <li><a href="#">Customer-service</a></li>
+
+    </ul>
+     <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'myaccount' %}">My Account</a></li>
+         <li><a href="{% url 'logut' %}"><span class="glyphicon glyphicon-log-in"></span> Logut</a></li>
+    </ul>
+  </div>
+</nav>
+
+<center><h1>My Account</h1></center>
+
+ {% csrf_token %}
+
+
+ {% csrf_token %}
+	<table style="width:10%" align=center border='2' bgcolor="blanchedalmond"  class="table table-bordered table-dark">
+  <tr bgcolor="green">
+  <tr bgcolor="green">
+            <th>email</th>
+            <td>{{user.email}}</td>
+        </tr>
+         <tr>
+            <th>name</th>
+            <td>{{user.name}}</td>
+        </tr>
+         <tr>
+            <th>actno</th>
+            <td>{{user.actno}}</td>
+        </tr>
+         <tr>
+            <th>actcif</th>
+            <td>{{user.actcif}}</td>
+        </tr>
+         <tr>
+            <th>actifsc</th>
+            <td>{{user.actifsc}}</td>
+        </tr>
+         <tr>
+            <th>dob</th>
+            <td>{{user.dob}}</td>
+        </tr>
+
+        <tr>
+            <th>balance</th>
+            <td>{{user.balance}}</td>
+        </tr>
+
+        <tr>
+            <th>branch</th>
+            <td>{{user.branch}}</td>
+        </tr>
+                <tr>
+            <th>propertyamount</th>
+            <td>{{user.propertyamount}}</td>
+        </tr>
+
+
+    </table>
+
+
+
+
+</body>
+</html>
