@@ -7,6 +7,7 @@ from .views import home_view, billpayment_view, creditcard_view, recharge_view, 
     applyloanuser_view, sendmessage, usermessages
 
 urlpatterns = [
+    path('',login_view, name="login"),
     path('home/billpayment/', billpayment_view, name="billpayment"),
     path('home/billpayment/recharge/', recharge_view, name="recharge"),
     path('home/billpayment/creditcard/', creditcard_view, name="creditcard"),
